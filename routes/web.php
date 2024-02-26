@@ -18,7 +18,7 @@ use App\Http\Controllers\RequestController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 // Route::get('/coba', [CobaController::class, 'index']);
