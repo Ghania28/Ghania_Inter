@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CobaController;
+use App\Http\Controllers\BelajarController;
+use App\Http\Controllers\GetDataController;
+use App\Http\Controllers\RequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coba', [CobaController::class, 'index']);
+// Route::get('/coba', [CobaController::class, 'index']);
 
+Route::get('/belajar', [BelajarController::class, 'index']);
+
+Route::get('/biodata', [BelajarController::class, 'biodata']);
+
+Route::get('/belajar/nama', [BelajarController::class, 'getNama']);
+
+Route::get('getdata', [GetDataController::class, 'viewGetData']);
+
+Route::get('pendaftaran', [RequestController::class, 'viewPostData']);
+Route::post('pendaftaran', [RequestController::class, 'processPostData']);
